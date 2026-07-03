@@ -1,0 +1,418 @@
+{
+  "generatedAt" : "2026-07-03T15:40:38.713884800+08:00",
+  "total" : 20,
+  "passed" : 19,
+  "failed" : 1,
+  "passRate" : 0.95,
+  "wordSkillConfusionMatrix" : {
+    "tp" : 16,
+    "tn" : 3,
+    "fp" : 0,
+    "fn" : 1
+  },
+  "wordSkillMetrics" : {
+    "accuracy" : 0.95,
+    "precision" : 1.0,
+    "recall" : 0.9411764705882353
+  },
+  "expectedSkillAccuracy" : 0.9411764705882353,
+  "tokenUsage" : {
+    "min" : 33,
+    "max" : 116,
+    "avg" : 90.25,
+    "total" : 1805,
+    "p50" : 100.0,
+    "p95" : 109.0
+  },
+  "latencyMs" : {
+    "min" : 1807,
+    "max" : 5528,
+    "avg" : 3310.65,
+    "total" : 66213,
+    "p50" : 3011.0,
+    "p95" : 4911.0
+  },
+  "byCategory" : {
+    "document_generation" : {
+      "executions" : 2,
+      "avgTokens" : 100.0,
+      "avgLatencyMs" : 3317.7413500000002,
+      "successRate" : 1.0
+    },
+    "template_fill" : {
+      "executions" : 1,
+      "avgTokens" : 104.0,
+      "avgLatencyMs" : 2512.769,
+      "successRate" : 1.0
+    },
+    "mail_merge" : {
+      "executions" : 1,
+      "avgTokens" : 88.0,
+      "avgLatencyMs" : 2988.8413,
+      "successRate" : 1.0
+    },
+    "toc_generation" : {
+      "executions" : 1,
+      "avgTokens" : 69.0,
+      "avgLatencyMs" : 2662.6372,
+      "successRate" : 1.0
+    },
+    "pdf_export" : {
+      "executions" : 1,
+      "avgTokens" : 56.0,
+      "avgLatencyMs" : 3028.6819,
+      "successRate" : 0.0
+    },
+    "business_plan" : {
+      "executions" : 1,
+      "avgTokens" : 109.0,
+      "avgLatencyMs" : 3910.0211,
+      "successRate" : 1.0
+    },
+    "certificate_generation" : {
+      "executions" : 1,
+      "avgTokens" : 100.0,
+      "avgLatencyMs" : 2945.3304,
+      "successRate" : 1.0
+    },
+    "table_report" : {
+      "executions" : 1,
+      "avgTokens" : 106.0,
+      "avgLatencyMs" : 5528.0587,
+      "successRate" : 1.0
+    },
+    "style_theme" : {
+      "executions" : 1,
+      "avgTokens" : 101.0,
+      "avgLatencyMs" : 4096.0551,
+      "successRate" : 1.0
+    },
+    "multi_turn_document_generation" : {
+      "executions" : 1,
+      "avgTokens" : 105.0,
+      "avgLatencyMs" : 2798.9883,
+      "successRate" : 1.0
+    },
+    "missing_filename" : {
+      "executions" : 1,
+      "avgTokens" : 104.0,
+      "avgLatencyMs" : 3019.9474,
+      "successRate" : 1.0
+    },
+    "template_syntax_guidance" : {
+      "executions" : 1,
+      "avgTokens" : 97.0,
+      "avgLatencyMs" : 3837.3158,
+      "successRate" : 1.0
+    },
+    "config_generation" : {
+      "executions" : 1,
+      "avgTokens" : 116.0,
+      "avgLatencyMs" : 2823.1515,
+      "successRate" : 1.0
+    },
+    "chart_embedding" : {
+      "executions" : 1,
+      "avgTokens" : 102.0,
+      "avgLatencyMs" : 3820.1925,
+      "successRate" : 1.0
+    },
+    "contract_document" : {
+      "executions" : 1,
+      "avgTokens" : 90.0,
+      "avgLatencyMs" : 3011.451,
+      "successRate" : 1.0
+    },
+    "non_activation_weather" : {
+      "executions" : 1,
+      "avgTokens" : 33.0,
+      "avgLatencyMs" : 1806.7641,
+      "successRate" : 1.0
+    },
+    "non_activation_deployment" : {
+      "executions" : 1,
+      "avgTokens" : 73.0,
+      "avgLatencyMs" : 2243.89,
+      "successRate" : 1.0
+    },
+    "non_activation_code_review" : {
+      "executions" : 1,
+      "avgTokens" : 47.0,
+      "avgLatencyMs" : 3632.6184,
+      "successRate" : 1.0
+    },
+    "ambiguous_followup" : {
+      "executions" : 1,
+      "avgTokens" : 105.0,
+      "avgLatencyMs" : 4911.2116,
+      "successRate" : 1.0
+    }
+  },
+  "byActualSkill" : {
+    "docx-report-generator" : {
+      "executions" : 16,
+      "avgTokens" : 99.75,
+      "avgLatencyMs" : 3468.84085,
+      "successRate" : 1.0
+    },
+    "pdf" : {
+      "executions" : 1,
+      "avgTokens" : 56.0,
+      "avgLatencyMs" : 3028.6819,
+      "successRate" : 0.0
+    },
+    "None" : {
+      "executions" : 2,
+      "avgTokens" : 40.0,
+      "avgLatencyMs" : 2719.69125,
+      "successRate" : 1.0
+    },
+    "render-deploy" : {
+      "executions" : 1,
+      "avgTokens" : 73.0,
+      "avgLatencyMs" : 2243.89,
+      "successRate" : 1.0
+    }
+  },
+  "cases" : [ {
+    "id" : "QA-WORD-001",
+    "category" : "document_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2945452700,
+    "tokens" : 91,
+    "reason" : "用户需要生成一份项目周报Word报告，符合docx-report-generator的触发条件——自动生成专业Word文档报告。",
+    "error" : "",
+    "task" : "帮我生成一份项目周报 Word 报告，文件名 weekly-project-report.docx，内容包括本周进展、风险问题和下周计划。"
+  }, {
+    "id" : "QA-WORD-002",
+    "category" : "document_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3690030000,
+    "tokens" : 109,
+    "reason" : "用户要求生成包含季度指标表和图表说明的销售总结docx文件，该技能专门用于自动生成专业Word报告，支持表格和图表插入，完全匹配需求。",
+    "error" : "",
+    "task" : "请生成一份 2026 年 Q2 销售总结 docx 文件，输出文件 q2-sales-summary.docx，需要包含季度指标表和图表说明。"
+  }, {
+    "id" : "QA-WORD-003",
+    "category" : "template_fill",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2512769000,
+    "tokens" : 104,
+    "reason" : "用户需要基于合同模板填充占位符生成Word文档，该技能专为模板填充和Word报告生成设计。",
+    "error" : "",
+    "task" : "我有一个合同模板 contract-template.docx，里面有 {{公司名称}}、{{签署日期}}、{{合同金额}}，请用 data.json 填充并生成 filled-contract.docx。"
+  }, {
+    "id" : "QA-WORD-004",
+    "category" : "mail_merge",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2988841300,
+    "tokens" : 88,
+    "reason" : "用户需要根据Word模板和CSV批量生成会议通知，该技能专门支持Word模板填充和批量生成。符合其应用场景。",
+    "error" : "",
+    "task" : "根据 notice-template.docx 和 recipients.csv 批量生成会议通知，每个人一个 Word 文件，输出到 output/notices/。"
+  }, {
+    "id" : "QA-WORD-005",
+    "category" : "toc_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2662637200,
+    "tokens" : 69,
+    "reason" : "用户需要为现有Word文档添加自动目录，该技能支持目录生成和Word文档操作。",
+    "error" : "",
+    "task" : "给 existing-report.docx 添加自动目录，保留原正文，生成 existing-report-with-toc.docx。"
+  }, {
+    "id" : "QA-WORD-006",
+    "category" : "pdf_export",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "pdf",
+    "passed" : false,
+    "latencyNanos" : 3028681900,
+    "tokens" : 56,
+    "reason" : "需要将Word文档导出为PDF，适合使用PDF相关工具进行格式转换。",
+    "error" : "",
+    "task" : "把 final-report.docx 导出成 PDF，输出 final-report.pdf，Word 原文件不要覆盖。"
+  }, {
+    "id" : "QA-WORD-007",
+    "category" : "business_plan",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3910021100,
+    "tokens" : 109,
+    "reason" : "用户需要生成商业计划书Word文档，该技能专门用于Word报告自动生成，支持模板填充、目录、图表等，符合任务要求。",
+    "error" : "",
+    "task" : "帮我创建一份商业计划书 Word 文档 bp-ai-education.docx，主题是 AI 教育平台，包含市场分析、产品方案、商业模式和财务预测。"
+  }, {
+    "id" : "QA-WORD-008",
+    "category" : "certificate_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2945330400,
+    "tokens" : 100,
+    "reason" : "用户需要基于模板批量生成结业证书，替换姓名、课程、编号，docx-report-generator 专为 Word 模板填充和证书批量生成设计。",
+    "error" : "",
+    "task" : "用 certificate-template.docx 和 students.csv 批量生成结业证书，证书里要替换姓名、课程名称、证书编号，输出到 output/certificates。"
+  }, {
+    "id" : "QA-WORD-009",
+    "category" : "table_report",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 5528058700,
+    "tokens" : 106,
+    "reason" : "用户需要生成包含表格和要点的运营日报Word文档，该技能专门用于自动生成专业Word报告，支持表格插入和要点列表，完全匹配需求。",
+    "error" : "",
+    "task" : "生成一份运营日报 daily-ops.docx，用表格展示访问量、注册数、付费数、转化率，并加上要点列表。"
+  }, {
+    "id" : "QA-WORD-010",
+    "category" : "style_theme",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 4096055100,
+    "tokens" : 101,
+    "reason" : "用户需要生成一份管理层汇报Word文档，要求蓝色商务风格、页眉页脚设置，符合docx-report-generator的‘生成Word报告、制作商业计划书’场景。",
+    "error" : "",
+    "task" : "创建一份管理层汇报 executive-brief.docx，要求蓝色商务风格、页眉写 Tailong Tech、页脚显示页码。"
+  }, {
+    "id" : "QA-WORD-011",
+    "category" : "multi_turn_document_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2798988300,
+    "tokens" : 105,
+    "reason" : "用户需要生成一份Word格式的研发月报，包含指定章节，docx-report-generator专门用于自动生成专业Word报告，完全匹配该需求。",
+    "error" : "",
+    "task" : "帮我做一份 Word 版研发月报。\n文件名叫 rd-monthly-2026-06.docx，章节包括里程碑、缺陷统计、资源风险和下月计划。"
+  }, {
+    "id" : "QA-WORD-012",
+    "category" : "missing_filename",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3019947400,
+    "tokens" : 104,
+    "reason" : "用户需要生成一份客户拜访报告，包含拜访对象、沟通纪要、机会点和后续动作，属于Word报告自动生成场景，该技能专门用于生成专业Word文档报告。",
+    "error" : "",
+    "task" : "帮我生成一份客户拜访报告，包含拜访对象、沟通纪要、机会点和后续动作。"
+  }, {
+    "id" : "QA-WORD-013",
+    "category" : "template_syntax_guidance",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3837315800,
+    "tokens" : 97,
+    "reason" : "用户询问Word模板占位符写法和data.json示例，属于模板填充和文档生成需求，docx-report-generator专门处理这类任务。",
+    "error" : "",
+    "task" : "我想做一个 Word 模板，变量包括姓名、日期和活动名称，应该怎么写占位符？顺便给我一个 data.json 示例。"
+  }, {
+    "id" : "QA-WORD-014",
+    "category" : "config_generation",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 2823151500,
+    "tokens" : 116,
+    "reason" : "用户需要生成一份包含背景、目标达成、问题清单（表格）和改进动作的Word报告，符合docx-report-generator的Word报告自动生成功能。",
+    "error" : "",
+    "task" : "请帮我写 create-report 用的 report_config.json，报告标题是项目复盘，章节要有背景、目标达成、问题清单、改进动作，其中问题清单用表格。"
+  }, {
+    "id" : "QA-WORD-015",
+    "category" : "chart_embedding",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3820192500,
+    "tokens" : 102,
+    "reason" : "用户需要生成财务分析报告Word文档，包含图表和明细表，该技能专门用于自动生成专业Word报告，支持图表插入和模板填充。",
+    "error" : "",
+    "task" : "生成一份财务分析报告 finance-analysis.docx，需要把收入、成本、利润做成图表插到 Word 里，并保留明细表。"
+  }, {
+    "id" : "QA-WORD-016",
+    "category" : "contract_document",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 3011451000,
+    "tokens" : 90,
+    "reason" : "用户需要生成一份Word版采购合同，包含合同典型条款，符合该技能自动生成Word文档的专长。",
+    "error" : "",
+    "task" : "请起草一份 Word 版采购合同 purchase-contract.docx，包含甲乙方信息、采购清单、付款条款、交付验收和违约责任。"
+  }, {
+    "id" : "QA-WORD-017",
+    "category" : "non_activation_weather",
+    "expectedSkill" : "",
+    "expectedActivation" : false,
+    "actualSkill" : "",
+    "passed" : true,
+    "latencyNanos" : 1806764100,
+    "tokens" : 33,
+    "reason" : "No skill in the catalog handles weather queries or clothing recommendations.",
+    "error" : "",
+    "task" : "今天上海天气怎么样？顺便告诉我适合穿什么。"
+  }, {
+    "id" : "QA-WORD-018",
+    "category" : "non_activation_deployment",
+    "expectedSkill" : "",
+    "expectedActivation" : false,
+    "actualSkill" : "render-deploy",
+    "passed" : true,
+    "latencyNanos" : 2243890000,
+    "tokens" : 73,
+    "reason" : "用户要求将Node.js服务部署到Render并生成render.yaml及环境变量说明，与render-deploy技能的描述完全匹配。",
+    "error" : "",
+    "task" : "帮我把 Node.js 服务部署到 Render，写 render.yaml 并说明环境变量怎么配。"
+  }, {
+    "id" : "QA-WORD-019",
+    "category" : "non_activation_code_review",
+    "expectedSkill" : "",
+    "expectedActivation" : false,
+    "actualSkill" : "",
+    "passed" : true,
+    "latencyNanos" : 3632618400,
+    "tokens" : 47,
+    "reason" : "No skill in the catalog is designed for Java code review focusing on concurrency and exception handling.",
+    "error" : "",
+    "task" : "审查一下 src/main/java 下面的 Java 代码，重点看并发安全和异常处理。"
+  }, {
+    "id" : "QA-WORD-020",
+    "category" : "ambiguous_followup",
+    "expectedSkill" : "docx-report-generator",
+    "expectedActivation" : true,
+    "actualSkill" : "docx-report-generator",
+    "passed" : true,
+    "latencyNanos" : 4911211600,
+    "tokens" : 105,
+    "reason" : "用户需要将汇报整理成专业的Word文档，包含摘要、关键指标、风险和决策事项，该技能专门用于自动生成Word报告。",
+    "error" : "",
+    "task" : "把这份汇报整理得专业一点。\n我希望最终是 Word 文件，文件名 board-update.docx，包含摘要、关键指标、风险和决策事项。"
+  } ]
+}
