@@ -1,0 +1,15 @@
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\controller\SkillController.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\DemoApplication.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\activation\LlmSkillActivationService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\activation\SkillActivationService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\activation\SkillRouteResult.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\discovery\DefaultSkillDiscoveryService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\discovery\SkillDiscoveryService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\execution\LlmSkillExecutionService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\execution\SkillExecutionRequest.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\execution\SkillExecutionService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\SkillDefinition.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\SkillFrontmatter.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\SkillLoader.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\SkillRuntimeService.java
+D:\project\java_project\skill_demo\src\main\java\com\example\demo\skill\SkillTools.java

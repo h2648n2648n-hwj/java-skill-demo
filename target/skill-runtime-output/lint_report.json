@@ -1,0 +1,46 @@
+{
+  "input": "D:\\project\\java_project\\skill_demo\\target\\skill-runtime-output\\Spring_AI_Skill_Routing.docx",
+  "fonts_by_char_count": {},
+  "direct_run_formatting_runs": 40,
+  "direct_paragraph_formatting_paragraphs": 0,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "Spring AI Skill Routing",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Spring AI Skill Routing",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Spring AI Skill Routing \u2014 Technical Brief",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Spring AI Skill Routing is a capability within the Spring AI framework that dyna",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Overview",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "run_text": "Skill routing addresses a common challenge in AI-powered applications: as the ra",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

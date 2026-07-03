@@ -1,0 +1,17 @@
+com\example\demo\DemoApplication.class
+com\example\demo\skill\activation\LlmSkillActivationService.class
+com\example\demo\skill\execution\LlmSkillExecutionService.class
+com\example\demo\skill\execution\SkillExecutionService.class
+com\example\demo\skill\SkillLoader.class
+com\example\demo\controller\SkillController$RunSkillRequest.class
+com\example\demo\skill\discovery\SkillDiscoveryService.class
+com\example\demo\skill\SkillFrontmatter.class
+com\example\demo\controller\SkillController.class
+com\example\demo\skill\SkillDefinition.class
+com\example\demo\skill\SkillLoader$ParsedSkillMarkdown.class
+com\example\demo\skill\SkillTools.class
+com\example\demo\skill\activation\SkillActivationService.class
+com\example\demo\skill\discovery\DefaultSkillDiscoveryService.class
+com\example\demo\skill\execution\SkillExecutionRequest.class
+com\example\demo\skill\SkillRuntimeService.class
+com\example\demo\skill\activation\SkillRouteResult.class
