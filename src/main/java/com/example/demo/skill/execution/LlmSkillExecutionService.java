@@ -42,7 +42,9 @@ public class LlmSkillExecutionService implements SkillExecutionService {
                 - references/ and scripts/ are not preloaded.
                 - If you need auxiliary files, call listSkillFiles or readSkillFile.
                 - If you need a helper script, call runSkillScript.
-                - If the user asks to create a Word document, call createDocxDocument with a .docx output path, title, and body.
+                - - If the current skill provides a helper script for Word generation, prefer runSkillScript.
+                - For docx-report-generator, use runSkillScript with scripts/docx_ops.py to create Word reports.
+                - Use createDocxDocument only when the selected skill does not provide a suitable script.
                 - If you need to persist intermediate JSON or text config, call writeTextFile.
                 - Never assume a reference or script content before reading it.
 
@@ -60,7 +62,7 @@ public class LlmSkillExecutionService implements SkillExecutionService {
 
         String result = chatClient.prompt()
                 .user(prompt)
-                .tools(skillTools)
+                .tools(skillTools)     //调用  工具
                 .call()
                 .content();
 

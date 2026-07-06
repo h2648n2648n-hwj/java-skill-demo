@@ -52,49 +52,7 @@ public class SkillTools {
         );
         return "Wrote text file: " + target;
     }
-    // 创建 Word 文档
-    @Tool(description = "Create a simple Word .docx document under the runtime output directory from a title and body text.")
-    public String createDocxDocument(String relativePath, String title, String body) throws IOException {
-        String safePath = relativePath == null || relativePath.isBlank()
-                ? "document.docx"
-                : relativePath;
 
-        if (!safePath.toLowerCase().endsWith(".docx")) {
-            safePath = safePath + ".docx";
-        }
-
-        Path target = resolveInsideOutput(safePath);
-        Files.createDirectories(target.getParent());
-
-        try (XWPFDocument doc = new XWPFDocument()) {
-            if (title != null && !title.isBlank()) {
-                XWPFParagraph titleParagraph = doc.createParagraph();
-                titleParagraph.setAlignment(ParagraphAlignment.CENTER);
-
-                XWPFRun titleRun = titleParagraph.createRun();
-                titleRun.setBold(true);
-                titleRun.setFontSize(16);
-                titleRun.setText(title);
-            }
-
-            String text = body == null ? "" : body;
-            for (String paragraphText : text.split("\\R\\s*\\R|\\R")) {
-                if (paragraphText.isBlank()) {
-                    continue;
-                }
-                XWPFParagraph paragraph = doc.createParagraph();
-                XWPFRun run = paragraph.createRun();
-                run.setFontSize(12);
-                run.setText(paragraphText.trim());
-            }
-
-            try (OutputStream out = Files.newOutputStream(target)) {
-                doc.write(out);
-            }
-        }
-
-        return "Created DOCX document: " + target;
-    }
 
     // 列出技能文件
     @Tool(description = "List files under a skill subdirectory. Examples: references, scripts, or empty string for the skill root.")
@@ -127,21 +85,21 @@ public class SkillTools {
     //执行脚本
     @Tool(description = "Run a helper script under the skill scripts directory. Supports .py, .js, and .jar demo scripts.")
     public String runSkillScript(String skillName, String relativeScriptPath, String args) throws IOException, InterruptedException {
-        SkillDefinition skill = discoveryService.get(skillName);
-        Path script = resolveInsideSkill(skill, relativeScriptPath);
+        SkillDefinition skill = discoveryService.get(skillName);   //根据名字获取技能定义
+        Path script = resolveInsideSkill(skill, relativeScriptPath);    // 解析到技能目录内的实际脚本路径。
         if (!Files.isRegularFile(script)) {
             return "Not a script file: " + relativeScriptPath;
         }
         if (!relativeScriptPath.replace('\\', '/').startsWith("scripts/")) {
             return "Only scripts under the scripts/ directory can be executed.";
-        }
+        }  //防止目录逃逸。
 
-        List<String> command = buildScriptCommand(script, splitArgs(args));
+        List<String> command = buildScriptCommand(script, splitArgs(args));  // 构建外部进程命令
         ProcessBuilder builder = new ProcessBuilder(command);
         builder.directory(skill.rootDir().toFile());
         builder.redirectErrorStream(true);
 
-        Process process = builder.start();
+        Process process = builder.start();   // 启动进程。
         boolean finished = process.waitFor(Duration.ofSeconds(20).toMillis(), TimeUnit.MILLISECONDS);
         if (!finished) {
             process.destroyForcibly();

@@ -2,39 +2,58 @@ package com.example.demo.skill.activation;
 
 import com.example.demo.skill.SkillDefinition;
 import com.example.demo.skill.discovery.SkillDiscoveryService;
-import com.example.demo.skill.execution.LlmSkillExecutionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Service
 public class LlmSkillActivationService implements SkillActivationService {
+    private static final int ROUTER_CANDIDATE_LIMIT = 5;
     private static final Logger log = LoggerFactory.getLogger(LlmSkillActivationService.class);
+
     private final ChatClient chatClient;
     private final SkillDiscoveryService discoveryService;
     private final ObjectMapper objectMapper;
+    private final SkillCandidateSelector candidateSelector;
 
     public LlmSkillActivationService(ChatClient.Builder builder,
                                      SkillDiscoveryService discoveryService,
-                                     ObjectMapper objectMapper) {
+                                     ObjectMapper objectMapper,
+                                     SkillCandidateSelector candidateSelector) {
         this.chatClient = builder.build();
         this.discoveryService = discoveryService;
         this.objectMapper = objectMapper;
+        this.candidateSelector = candidateSelector;
     }
 
-    //激活技能
     @Override
     public SkillRouteResult activate(String task) {
         if (discoveryService.list().isEmpty()) {
             throw new IllegalStateException("No skills loaded.");
         }
-        // 构建技能目录
-        String skillCatalog = discoveryService.list().stream()
+
+        // 第一步：先用本地 BM25 召回器选出少量候选技能。
+
+        List<SkillDefinition> candidates = candidateSelector.select(
+                task,
+                discoveryService.list(),
+                ROUTER_CANDIDATE_LIMIT
+        );
+        if (candidates.isEmpty()) {
+            candidates = List.copyOf(discoveryService.list());
+        }
+
+        // 第二步：只把候选技能目录发给大模型，让大模型做最终选择。
+
+        //String skillCatalog = candidates.stream()
+        //  全部交给LLM
+        String skillCatalog =  discoveryService.list().stream()
                 .map(skill -> """
                         - name: %s
                           description: %s
@@ -70,8 +89,8 @@ public class LlmSkillActivationService implements SkillActivationService {
                 .user(prompt)
                 .call()
                 .content();
-        log.info("LLM 对于激活的选择: {}", content);
-        //解析 LLM 响应
+        log.info("LLM skill activation result: {}", content);
+
         SkillRouteResult routeResult = parseRouteResult(content);
         if (routeResult.skillName() == null || routeResult.skillName().isBlank()) {
             return routeResult;
@@ -81,7 +100,6 @@ public class LlmSkillActivationService implements SkillActivationService {
         return withDirectoryName(routeResult, skill);
     }
 
-    //解析方法
     private SkillRouteResult parseRouteResult(String content) {
         String json = extractJson(content);
         try {
@@ -105,7 +123,10 @@ public class LlmSkillActivationService implements SkillActivationService {
         return trimmed;
     }
 
-    //降级策略
+    /**
+     * 降级策略：如果大模型没有严格返回 JSON，但文本里提到了某个已知 skill 名称，
+     * 就选择这个 skill，避免因为格式问题直接失败。
+     */
     private Optional<SkillRouteResult> fallbackRouteFromText(String content) {
         if (content == null || content.isBlank()) {
             return Optional.empty();

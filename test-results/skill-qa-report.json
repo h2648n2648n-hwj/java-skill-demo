@@ -1,418 +1,454 @@
 {
-  "generatedAt" : "2026-07-03T15:40:38.713884800+08:00",
+  "generatedAt" : "2026-07-06T16:18:20.936994700+08:00",
   "total" : 20,
-  "passed" : 19,
-  "failed" : 1,
-  "passRate" : 0.95,
+  "passed" : 17,
+  "failed" : 3,
+  "passRate" : 0.85,
   "wordSkillConfusionMatrix" : {
-    "tp" : 16,
-    "tn" : 3,
+    "tp" : 2,
+    "tn" : 17,
     "fp" : 0,
     "fn" : 1
   },
   "wordSkillMetrics" : {
     "accuracy" : 0.95,
     "precision" : 1.0,
-    "recall" : 0.9411764705882353
+    "recall" : 0.6666666666666666
   },
-  "expectedSkillAccuracy" : 0.9411764705882353,
+  "expectedSkillAccuracy" : 0.8333333333333334,
   "tokenUsage" : {
-    "min" : 33,
-    "max" : 116,
-    "avg" : 90.25,
-    "total" : 1805,
-    "p50" : 100.0,
-    "p95" : 109.0
+    "min" : 55,
+    "max" : 131,
+    "avg" : 83.95,
+    "total" : 1679,
+    "p50" : 79.0,
+    "p95" : 120.0
   },
   "latencyMs" : {
-    "min" : 1807,
-    "max" : 5528,
-    "avg" : 3310.65,
-    "total" : 66213,
-    "p50" : 3011.0,
-    "p95" : 4911.0
+    "min" : 1393,
+    "max" : 7613,
+    "avg" : 2386.2,
+    "total" : 47724,
+    "p50" : 2063.0,
+    "p95" : 2837.0
   },
   "byCategory" : {
     "document_generation" : {
-      "executions" : 2,
-      "avgTokens" : 100.0,
-      "avgLatencyMs" : 3317.7413500000002,
+      "executions" : 1,
+      "avgTokens" : 117.0,
+      "avgLatencyMs" : 2837.1934,
       "successRate" : 1.0
     },
     "template_fill" : {
       "executions" : 1,
-      "avgTokens" : 104.0,
-      "avgLatencyMs" : 2512.769,
+      "avgTokens" : 85.0,
+      "avgLatencyMs" : 2410.1099,
       "successRate" : 1.0
     },
-    "mail_merge" : {
+    "document_conversion" : {
       "executions" : 1,
-      "avgTokens" : 88.0,
-      "avgLatencyMs" : 2988.8413,
-      "successRate" : 1.0
-    },
-    "toc_generation" : {
-      "executions" : 1,
-      "avgTokens" : 69.0,
-      "avgLatencyMs" : 2662.6372,
-      "successRate" : 1.0
-    },
-    "pdf_export" : {
-      "executions" : 1,
-      "avgTokens" : 56.0,
-      "avgLatencyMs" : 3028.6819,
+      "avgTokens" : 63.0,
+      "avgLatencyMs" : 2670.1811,
       "successRate" : 0.0
     },
-    "business_plan" : {
-      "executions" : 1,
-      "avgTokens" : 109.0,
-      "avgLatencyMs" : 3910.0211,
+    "render_deployment" : {
+      "executions" : 2,
+      "avgTokens" : 76.5,
+      "avgLatencyMs" : 1804.7291,
       "successRate" : 1.0
     },
-    "certificate_generation" : {
+    "cloudflare_deployment" : {
+      "executions" : 2,
+      "avgTokens" : 64.5,
+      "avgLatencyMs" : 1899.7758999999999,
+      "successRate" : 1.0
+    },
+    "openai_docs" : {
+      "executions" : 2,
+      "avgTokens" : 79.5,
+      "avgLatencyMs" : 1707.10585,
+      "successRate" : 1.0
+    },
+    "pdf_processing" : {
+      "executions" : 1,
+      "avgTokens" : 59.0,
+      "avgLatencyMs" : 1833.6891,
+      "successRate" : 1.0
+    },
+    "security_review" : {
       "executions" : 1,
       "avgTokens" : 100.0,
-      "avgLatencyMs" : 2945.3304,
+      "avgLatencyMs" : 1940.5989,
       "successRate" : 1.0
     },
-    "table_report" : {
+    "security_ownership" : {
       "executions" : 1,
-      "avgTokens" : 106.0,
-      "avgLatencyMs" : 5528.0587,
+      "avgTokens" : 120.0,
+      "avgLatencyMs" : 2584.257,
       "successRate" : 1.0
     },
-    "style_theme" : {
+    "aspnet_core" : {
       "executions" : 1,
-      "avgTokens" : 101.0,
-      "avgLatencyMs" : 4096.0551,
+      "avgTokens" : 63.0,
+      "avgLatencyMs" : 1624.9229,
       "successRate" : 1.0
     },
-    "multi_turn_document_generation" : {
+    "chatgpt_apps" : {
       "executions" : 1,
-      "avgTokens" : 105.0,
-      "avgLatencyMs" : 2798.9883,
+      "avgTokens" : 92.0,
+      "avgLatencyMs" : 2834.128,
       "successRate" : 1.0
     },
-    "missing_filename" : {
+    "figma_workflow" : {
       "executions" : 1,
-      "avgTokens" : 104.0,
-      "avgLatencyMs" : 3019.9474,
+      "avgTokens" : 131.0,
+      "avgLatencyMs" : 7612.6352,
       "successRate" : 1.0
     },
-    "template_syntax_guidance" : {
+    "notion_workflow" : {
       "executions" : 1,
-      "avgTokens" : 97.0,
-      "avgLatencyMs" : 3837.3158,
+      "avgTokens" : 95.0,
+      "avgLatencyMs" : 2596.5076,
+      "successRate" : 0.0
+    },
+    "speech_processing" : {
+      "executions" : 1,
+      "avgTokens" : 79.0,
+      "avgLatencyMs" : 2227.7937,
+      "successRate" : 0.0
+    },
+    "codex_migration" : {
+      "executions" : 1,
+      "avgTokens" : 95.0,
+      "avgLatencyMs" : 1393.3477,
       "successRate" : 1.0
     },
-    "config_generation" : {
-      "executions" : 1,
-      "avgTokens" : 116.0,
-      "avgLatencyMs" : 2823.1515,
-      "successRate" : 1.0
-    },
-    "chart_embedding" : {
-      "executions" : 1,
-      "avgTokens" : 102.0,
-      "avgLatencyMs" : 3820.1925,
-      "successRate" : 1.0
-    },
-    "contract_document" : {
-      "executions" : 1,
-      "avgTokens" : 90.0,
-      "avgLatencyMs" : 3011.451,
-      "successRate" : 1.0
-    },
-    "non_activation_weather" : {
-      "executions" : 1,
-      "avgTokens" : 33.0,
-      "avgLatencyMs" : 1806.7641,
-      "successRate" : 1.0
-    },
-    "non_activation_deployment" : {
-      "executions" : 1,
-      "avgTokens" : 73.0,
-      "avgLatencyMs" : 2243.89,
-      "successRate" : 1.0
-    },
-    "non_activation_code_review" : {
-      "executions" : 1,
-      "avgTokens" : 47.0,
-      "avgLatencyMs" : 3632.6184,
-      "successRate" : 1.0
-    },
-    "ambiguous_followup" : {
-      "executions" : 1,
-      "avgTokens" : 105.0,
-      "avgLatencyMs" : 4911.2116,
+    "negative_routing" : {
+      "executions" : 2,
+      "avgTokens" : 69.5,
+      "avgLatencyMs" : 2167.5197,
       "successRate" : 1.0
     }
   },
   "byActualSkill" : {
     "docx-report-generator" : {
-      "executions" : 16,
-      "avgTokens" : 99.75,
-      "avgLatencyMs" : 3468.84085,
+      "executions" : 2,
+      "avgTokens" : 101.0,
+      "avgLatencyMs" : 2623.65165,
       "successRate" : 1.0
     },
     "pdf" : {
+      "executions" : 2,
+      "avgTokens" : 61.0,
+      "avgLatencyMs" : 2251.9350999999997,
+      "successRate" : 0.5
+    },
+    "render-deploy" : {
+      "executions" : 2,
+      "avgTokens" : 76.5,
+      "avgLatencyMs" : 1804.7291,
+      "successRate" : 1.0
+    },
+    "cloudflare-deploy" : {
+      "executions" : 2,
+      "avgTokens" : 64.5,
+      "avgLatencyMs" : 1899.7758999999999,
+      "successRate" : 1.0
+    },
+    "openai-docs" : {
+      "executions" : 2,
+      "avgTokens" : 79.5,
+      "avgLatencyMs" : 1707.10585,
+      "successRate" : 1.0
+    },
+    "security-best-practices" : {
       "executions" : 1,
-      "avgTokens" : 56.0,
-      "avgLatencyMs" : 3028.6819,
+      "avgTokens" : 100.0,
+      "avgLatencyMs" : 1940.5989,
+      "successRate" : 1.0
+    },
+    "security-ownership-map" : {
+      "executions" : 1,
+      "avgTokens" : 120.0,
+      "avgLatencyMs" : 2584.257,
+      "successRate" : 1.0
+    },
+    "aspnet-core" : {
+      "executions" : 1,
+      "avgTokens" : 63.0,
+      "avgLatencyMs" : 1624.9229,
+      "successRate" : 1.0
+    },
+    "chatgpt-apps" : {
+      "executions" : 1,
+      "avgTokens" : 92.0,
+      "avgLatencyMs" : 2834.128,
+      "successRate" : 1.0
+    },
+    "figma-generate-library" : {
+      "executions" : 1,
+      "avgTokens" : 131.0,
+      "avgLatencyMs" : 7612.6352,
+      "successRate" : 1.0
+    },
+    "notion-knowledge-capture" : {
+      "executions" : 1,
+      "avgTokens" : 95.0,
+      "avgLatencyMs" : 2596.5076,
       "successRate" : 0.0
     },
     "None" : {
-      "executions" : 2,
-      "avgTokens" : 40.0,
-      "avgLatencyMs" : 2719.69125,
-      "successRate" : 1.0
+      "executions" : 3,
+      "avgTokens" : 72.66666666666667,
+      "avgLatencyMs" : 2187.611033333333,
+      "successRate" : 0.6666666666666666
     },
-    "render-deploy" : {
+    "migrate-to-codex" : {
       "executions" : 1,
-      "avgTokens" : 73.0,
-      "avgLatencyMs" : 2243.89,
+      "avgTokens" : 95.0,
+      "avgLatencyMs" : 1393.3477,
       "successRate" : 1.0
     }
   },
   "cases" : [ {
-    "id" : "QA-WORD-001",
+    "id" : "QA-GEN-001",
     "category" : "document_generation",
     "expectedSkill" : "docx-report-generator",
     "expectedActivation" : true,
     "actualSkill" : "docx-report-generator",
     "passed" : true,
-    "latencyNanos" : 2945452700,
-    "tokens" : 91,
-    "reason" : "用户需要生成一份项目周报Word报告，符合docx-report-generator的触发条件——自动生成专业Word文档报告。",
+    "latencyNanos" : 2837193400,
+    "tokens" : 117,
+    "reason" : "用户需要生成一份包含指标概览、交付趋势、风险问题和改进计划的Word报告，docx-report-generator 专门用于自动生成专业Word报告，符合需求。",
     "error" : "",
-    "task" : "帮我生成一份项目周报 Word 报告，文件名 weekly-project-report.docx，内容包括本周进展、风险问题和下周计划。"
+    "task" : "帮我生成一份 2026 年上半年研发效能 Word 报告，文件名 engineering-efficiency-h1.docx，需要包含指标概览、交付趋势、风险问题和改进计划。"
   }, {
-    "id" : "QA-WORD-002",
-    "category" : "document_generation",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3690030000,
-    "tokens" : 109,
-    "reason" : "用户要求生成包含季度指标表和图表说明的销售总结docx文件，该技能专门用于自动生成专业Word报告，支持表格和图表插入，完全匹配需求。",
-    "error" : "",
-    "task" : "请生成一份 2026 年 Q2 销售总结 docx 文件，输出文件 q2-sales-summary.docx，需要包含季度指标表和图表说明。"
-  }, {
-    "id" : "QA-WORD-003",
+    "id" : "QA-GEN-002",
     "category" : "template_fill",
     "expectedSkill" : "docx-report-generator",
     "expectedActivation" : true,
     "actualSkill" : "docx-report-generator",
     "passed" : true,
-    "latencyNanos" : 2512769000,
-    "tokens" : 104,
-    "reason" : "用户需要基于合同模板填充占位符生成Word文档，该技能专为模板填充和Word报告生成设计。",
+    "latencyNanos" : 2410109900,
+    "tokens" : 85,
+    "reason" : "用户需要基于Word模板和CSV数据批量生成录用通知书，该技能专门支持模板填充和批量文档生成。",
     "error" : "",
-    "task" : "我有一个合同模板 contract-template.docx，里面有 {{公司名称}}、{{签署日期}}、{{合同金额}}，请用 data.json 填充并生成 filled-contract.docx。"
+    "task" : "我有模板 offer-template.docx 和候选人数据 candidates.csv，请批量生成录用通知书，输出到 output/offers/。"
   }, {
-    "id" : "QA-WORD-004",
-    "category" : "mail_merge",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 2988841300,
-    "tokens" : 88,
-    "reason" : "用户需要根据Word模板和CSV批量生成会议通知，该技能专门支持Word模板填充和批量生成。符合其应用场景。",
-    "error" : "",
-    "task" : "根据 notice-template.docx 和 recipients.csv 批量生成会议通知，每个人一个 Word 文件，输出到 output/notices/。"
-  }, {
-    "id" : "QA-WORD-005",
-    "category" : "toc_generation",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 2662637200,
-    "tokens" : 69,
-    "reason" : "用户需要为现有Word文档添加自动目录，该技能支持目录生成和Word文档操作。",
-    "error" : "",
-    "task" : "给 existing-report.docx 添加自动目录，保留原正文，生成 existing-report-with-toc.docx。"
-  }, {
-    "id" : "QA-WORD-006",
-    "category" : "pdf_export",
+    "id" : "QA-GEN-003",
+    "category" : "document_conversion",
     "expectedSkill" : "docx-report-generator",
     "expectedActivation" : true,
     "actualSkill" : "pdf",
     "passed" : false,
-    "latencyNanos" : 3028681900,
-    "tokens" : 56,
-    "reason" : "需要将Word文档导出为PDF，适合使用PDF相关工具进行格式转换。",
+    "latencyNanos" : 2670181100,
+    "tokens" : 63,
+    "reason" : "用户需要将Word文档转换为PDF文件，这属于PDF的创建和转换任务，符合pdf技能的使用范围。",
     "error" : "",
-    "task" : "把 final-report.docx 导出成 PDF，输出 final-report.pdf，Word 原文件不要覆盖。"
+    "task" : "把 final-report.docx 导出成 final-report.pdf，并保留原 Word 文件。"
   }, {
-    "id" : "QA-WORD-007",
-    "category" : "business_plan",
-    "expectedSkill" : "docx-report-generator",
+    "id" : "QA-GEN-004",
+    "category" : "render_deployment",
+    "expectedSkill" : "render-deploy",
     "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3910021100,
-    "tokens" : 109,
-    "reason" : "用户需要生成商业计划书Word文档，该技能专门用于Word报告自动生成，支持模板填充、目录、图表等，符合任务要求。",
-    "error" : "",
-    "task" : "帮我创建一份商业计划书 Word 文档 bp-ai-education.docx，主题是 AI 教育平台，包含市场分析、产品方案、商业模式和财务预测。"
-  }, {
-    "id" : "QA-WORD-008",
-    "category" : "certificate_generation",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 2945330400,
-    "tokens" : 100,
-    "reason" : "用户需要基于模板批量生成结业证书，替换姓名、课程、编号，docx-report-generator 专为 Word 模板填充和证书批量生成设计。",
-    "error" : "",
-    "task" : "用 certificate-template.docx 和 students.csv 批量生成结业证书，证书里要替换姓名、课程名称、证书编号，输出到 output/certificates。"
-  }, {
-    "id" : "QA-WORD-009",
-    "category" : "table_report",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 5528058700,
-    "tokens" : 106,
-    "reason" : "用户需要生成包含表格和要点的运营日报Word文档，该技能专门用于自动生成专业Word报告，支持表格插入和要点列表，完全匹配需求。",
-    "error" : "",
-    "task" : "生成一份运营日报 daily-ops.docx，用表格展示访问量、注册数、付费数、转化率，并加上要点列表。"
-  }, {
-    "id" : "QA-WORD-010",
-    "category" : "style_theme",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 4096055100,
-    "tokens" : 101,
-    "reason" : "用户需要生成一份管理层汇报Word文档，要求蓝色商务风格、页眉页脚设置，符合docx-report-generator的‘生成Word报告、制作商业计划书’场景。",
-    "error" : "",
-    "task" : "创建一份管理层汇报 executive-brief.docx，要求蓝色商务风格、页眉写 Tailong Tech、页脚显示页码。"
-  }, {
-    "id" : "QA-WORD-011",
-    "category" : "multi_turn_document_generation",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 2798988300,
-    "tokens" : 105,
-    "reason" : "用户需要生成一份Word格式的研发月报，包含指定章节，docx-report-generator专门用于自动生成专业Word报告，完全匹配该需求。",
-    "error" : "",
-    "task" : "帮我做一份 Word 版研发月报。\n文件名叫 rd-monthly-2026-06.docx，章节包括里程碑、缺陷统计、资源风险和下月计划。"
-  }, {
-    "id" : "QA-WORD-012",
-    "category" : "missing_filename",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3019947400,
-    "tokens" : 104,
-    "reason" : "用户需要生成一份客户拜访报告，包含拜访对象、沟通纪要、机会点和后续动作，属于Word报告自动生成场景，该技能专门用于生成专业Word文档报告。",
-    "error" : "",
-    "task" : "帮我生成一份客户拜访报告，包含拜访对象、沟通纪要、机会点和后续动作。"
-  }, {
-    "id" : "QA-WORD-013",
-    "category" : "template_syntax_guidance",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3837315800,
-    "tokens" : 97,
-    "reason" : "用户询问Word模板占位符写法和data.json示例，属于模板填充和文档生成需求，docx-report-generator专门处理这类任务。",
-    "error" : "",
-    "task" : "我想做一个 Word 模板，变量包括姓名、日期和活动名称，应该怎么写占位符？顺便给我一个 data.json 示例。"
-  }, {
-    "id" : "QA-WORD-014",
-    "category" : "config_generation",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 2823151500,
-    "tokens" : 116,
-    "reason" : "用户需要生成一份包含背景、目标达成、问题清单（表格）和改进动作的Word报告，符合docx-report-generator的Word报告自动生成功能。",
-    "error" : "",
-    "task" : "请帮我写 create-report 用的 report_config.json，报告标题是项目复盘，章节要有背景、目标达成、问题清单、改进动作，其中问题清单用表格。"
-  }, {
-    "id" : "QA-WORD-015",
-    "category" : "chart_embedding",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3820192500,
-    "tokens" : 102,
-    "reason" : "用户需要生成财务分析报告Word文档，包含图表和明细表，该技能专门用于自动生成专业Word报告，支持图表插入和模板填充。",
-    "error" : "",
-    "task" : "生成一份财务分析报告 finance-analysis.docx，需要把收入、成本、利润做成图表插到 Word 里，并保留明细表。"
-  }, {
-    "id" : "QA-WORD-016",
-    "category" : "contract_document",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
-    "passed" : true,
-    "latencyNanos" : 3011451000,
-    "tokens" : 90,
-    "reason" : "用户需要生成一份Word版采购合同，包含合同典型条款，符合该技能自动生成Word文档的专长。",
-    "error" : "",
-    "task" : "请起草一份 Word 版采购合同 purchase-contract.docx，包含甲乙方信息、采购清单、付款条款、交付验收和违约责任。"
-  }, {
-    "id" : "QA-WORD-017",
-    "category" : "non_activation_weather",
-    "expectedSkill" : "",
-    "expectedActivation" : false,
-    "actualSkill" : "",
-    "passed" : true,
-    "latencyNanos" : 1806764100,
-    "tokens" : 33,
-    "reason" : "No skill in the catalog handles weather queries or clothing recommendations.",
-    "error" : "",
-    "task" : "今天上海天气怎么样？顺便告诉我适合穿什么。"
-  }, {
-    "id" : "QA-WORD-018",
-    "category" : "non_activation_deployment",
-    "expectedSkill" : "",
-    "expectedActivation" : false,
     "actualSkill" : "render-deploy",
     "passed" : true,
-    "latencyNanos" : 2243890000,
-    "tokens" : 73,
-    "reason" : "用户要求将Node.js服务部署到Render并生成render.yaml及环境变量说明，与render-deploy技能的描述完全匹配。",
+    "latencyNanos" : 1556215600,
+    "tokens" : 71,
+    "reason" : "用户要求部署Node API到Render，需要PostgreSQL和worker，生成render.yaml，完全符合render-deploy技能的用途。",
     "error" : "",
-    "task" : "帮我把 Node.js 服务部署到 Render，写 render.yaml 并说明环境变量怎么配。"
+    "task" : "帮我把这个 Node API 部署到 Render，需要 PostgreSQL 数据库和一个后台 worker，请生成 render.yaml。"
   }, {
-    "id" : "QA-WORD-019",
-    "category" : "non_activation_code_review",
+    "id" : "QA-GEN-005",
+    "category" : "render_deployment",
+    "expectedSkill" : "render-deploy",
+    "expectedActivation" : true,
+    "actualSkill" : "render-deploy",
+    "passed" : true,
+    "latencyNanos" : 2053242600,
+    "tokens" : 82,
+    "reason" : "用户想用Render部署一个Docker镜像，虽然没有Git仓库，但Render支持从容器镜像部署，该技能适用于部署到Render平台。",
+    "error" : "",
+    "task" : "我只有一个 ghcr.io/acme/api:1.2.3 镜像，没有 Git 仓库，想用 Render 部署。"
+  }, {
+    "id" : "QA-GEN-006",
+    "category" : "cloudflare_deployment",
+    "expectedSkill" : "cloudflare-deploy",
+    "expectedActivation" : true,
+    "actualSkill" : "cloudflare-deploy",
+    "passed" : true,
+    "latencyNanos" : 1737042900,
+    "tokens" : 55,
+    "reason" : "用户要求将Vite前端发布到Cloudflare Pages，符合技能描述的使用场景。",
+    "error" : "",
+    "task" : "把这个 Vite 前端发布到 Cloudflare Pages，构建命令 npm run build，输出目录 dist。"
+  }, {
+    "id" : "QA-GEN-007",
+    "category" : "cloudflare_deployment",
+    "expectedSkill" : "cloudflare-deploy",
+    "expectedActivation" : true,
+    "actualSkill" : "cloudflare-deploy",
+    "passed" : true,
+    "latencyNanos" : 2062508900,
+    "tokens" : 74,
+    "reason" : "用户要求开发 Cloudflare Worker，包含 KV 存储和定时任务（Cron Triggers），符合 cloudflare-deploy 技能的适用范围。",
+    "error" : "",
+    "task" : "我想写一个 Cloudflare Worker 做边缘 API，需要 KV 存 session，再加一个每天凌晨执行的定时任务。"
+  }, {
+    "id" : "QA-GEN-008",
+    "category" : "openai_docs",
+    "expectedSkill" : "openai-docs",
+    "expectedActivation" : true,
+    "actualSkill" : "openai-docs",
+    "passed" : true,
+    "latencyNanos" : 1593394900,
+    "tokens" : 77,
+    "reason" : "用户询问OpenAI Responses API的官方文档和最小请求结构，适合使用openai-docs技能查阅最新官方文档。",
+    "error" : "",
+    "task" : "我准备用 OpenAI Responses API 做一个带工具调用的客服 Agent，请查官方文档并说明最小请求结构。"
+  }, {
+    "id" : "QA-GEN-009",
+    "category" : "openai_docs",
+    "expectedSkill" : "openai-docs",
+    "expectedActivation" : true,
+    "actualSkill" : "openai-docs",
+    "passed" : true,
+    "latencyNanos" : 1820816800,
+    "tokens" : 82,
+    "reason" : "用户需要升级模型到最新官方推荐版本并调整prompt，openai-docs技能提供模型升级和prompt升级指导。",
+    "error" : "",
+    "task" : "把项目里的 gpt-4.1 默认模型升级到当前官方推荐的最新模型，并说明需要改哪些 prompt。"
+  }, {
+    "id" : "QA-GEN-010",
+    "category" : "pdf_processing",
+    "expectedSkill" : "pdf",
+    "expectedActivation" : true,
+    "actualSkill" : "pdf",
+    "passed" : true,
+    "latencyNanos" : 1833689100,
+    "tokens" : 59,
+    "reason" : "任务涉及读取PDF文件、提取目录和标题，与pdf技能描述完全匹配。",
+    "error" : "",
+    "task" : "请读取 annual-report.pdf 的前 5 页，提取目录和每页标题，并给出摘要。"
+  }, {
+    "id" : "QA-GEN-011",
+    "category" : "security_review",
+    "expectedSkill" : "security-best-practices",
+    "expectedActivation" : true,
+    "actualSkill" : "security-best-practices",
+    "passed" : true,
+    "latencyNanos" : 1940598900,
+    "tokens" : 100,
+    "reason" : "用户要求对Express登录接口进行安全审查，涉及硬编码密钥、弱密码哈希、SQL注入和敏感日志问题，符合安全最佳实践技能的使用条件。",
+    "error" : "",
+    "task" : "帮我审查这个 Express 登录接口有没有硬编码密钥、弱密码哈希、SQL 注入和敏感日志问题。"
+  }, {
+    "id" : "QA-GEN-012",
+    "category" : "security_ownership",
+    "expectedSkill" : "security-ownership-map",
+    "expectedActivation" : true,
+    "actualSkill" : "security-ownership-map",
+    "passed" : true,
+    "latencyNanos" : 2584257000,
+    "tokens" : 120,
+    "reason" : "用户要求为仓库模块生成安全负责人矩阵，包括owner、reviewer和风险等级，这需要基于git历史进行安全所有权分析，security-ownership-map正是为此设计的技能。",
+    "error" : "",
+    "task" : "请为我们仓库的认证、支付、用户资料、后台任务四个模块生成安全负责人矩阵，输出每个模块的 owner、reviewer 和风险等级。"
+  }, {
+    "id" : "QA-GEN-013",
+    "category" : "aspnet_core",
+    "expectedSkill" : "aspnet-core",
+    "expectedActivation" : true,
+    "actualSkill" : "aspnet-core",
+    "passed" : true,
+    "latencyNanos" : 1624922900,
+    "tokens" : 63,
+    "reason" : "用户需要为 ASP.NET Core API 增加健康检查、Swagger 和分环境配置，属于 ASP.NET Core 开发任务。",
+    "error" : "",
+    "task" : "帮我给 ASP.NET Core API 增加健康检查、Swagger 和 appsettings 分环境配置。"
+  }, {
+    "id" : "QA-GEN-014",
+    "category" : "chatgpt_apps",
+    "expectedSkill" : "chatgpt-apps",
+    "expectedActivation" : true,
+    "actualSkill" : "chatgpt-apps",
+    "passed" : true,
+    "latencyNanos" : 2834128000,
+    "tokens" : 92,
+    "reason" : "用户任务要求结合MCP server和widget UI构建ChatGPT App，并设计查询订单和退款两个tool，完全匹配chatgpt-apps技能的应用场景。",
+    "error" : "",
+    "task" : "我要做一个 ChatGPT App，前端组件显示订单列表，MCP server 暴露查询订单和退款两个 tool。请给出实现方案。"
+  }, {
+    "id" : "QA-GEN-015",
+    "category" : "figma_workflow",
+    "expectedSkill" : "figma-generate-library",
+    "expectedActivation" : true,
+    "actualSkill" : "figma-generate-library",
+    "passed" : true,
+    "latencyNanos" : 7612635200,
+    "tokens" : 131,
+    "reason" : "用户需要从Figma设计稿提取颜色token并生成组件库（按钮、输入框、卡片），这属于从设计到代码的设计系统构建任务。figma-generate-library专用于创建变量/令牌、构建组件库、协调代码与Figma之间的差距，与用户需求匹配。",
+    "error" : "",
+    "task" : "根据这个 Figma 设计稿生成 React 组件库，要求提取按钮、输入框、卡片和颜色 token。"
+  }, {
+    "id" : "QA-GEN-016",
+    "category" : "notion_workflow",
+    "expectedSkill" : "notion-meeting-intelligence",
+    "expectedActivation" : true,
+    "actualSkill" : "notion-knowledge-capture",
+    "passed" : false,
+    "latencyNanos" : 2596507600,
+    "tokens" : 95,
+    "reason" : "用户要求将产品评审会议的决策、行动项、负责人和截止日期整理到Notion，符合该技能‘将对话和决策捕捉到结构化Notion页面’的用途。",
+    "error" : "",
+    "task" : "把这次产品评审会议整理到 Notion：包含决策、行动项、负责人和截止日期。"
+  }, {
+    "id" : "QA-GEN-017",
+    "category" : "speech_processing",
+    "expectedSkill" : "speech",
+    "expectedActivation" : true,
+    "actualSkill" : "",
+    "passed" : false,
+    "latencyNanos" : 2227793700,
+    "tokens" : 79,
+    "reason" : "用户任务要求将音频转写成文字并进行说话人分离，但技能目录中没有提供语音识别或会议纪要生成相关的技能。",
+    "error" : "",
+    "task" : "请把 meeting-audio.wav 转写成中文会议纪要，并标出不同说话人的发言。"
+  }, {
+    "id" : "QA-GEN-018",
+    "category" : "codex_migration",
+    "expectedSkill" : "migrate-to-codex",
+    "expectedActivation" : true,
+    "actualSkill" : "migrate-to-codex",
+    "passed" : true,
+    "latencyNanos" : 1393347700,
+    "tokens" : 95,
+    "reason" : "用户请求从旧流程迁移到 Codex，需要仓库配置、AGENTS.md、skills 和 MCP 的迁移计划，这是 migrate-to-codex 技能的核心任务。",
+    "error" : "",
+    "task" : "我们团队想从旧的脚本式 AI 编码流程迁移到 Codex，请给出仓库配置、AGENTS.md、skills 和 MCP 的迁移计划。"
+  }, {
+    "id" : "QA-GEN-019",
+    "category" : "negative_routing",
     "expectedSkill" : "",
     "expectedActivation" : false,
     "actualSkill" : "",
     "passed" : true,
-    "latencyNanos" : 3632618400,
-    "tokens" : 47,
-    "reason" : "No skill in the catalog is designed for Java code review focusing on concurrency and exception handling.",
+    "latencyNanos" : 2130230200,
+    "tokens" : 69,
+    "reason" : "用户询问天气和餐饮推荐，现有技能均为开发、部署、文档等专业领域技能，无适合回答此类日常问题的技能。",
     "error" : "",
-    "task" : "审查一下 src/main/java 下面的 Java 代码，重点看并发安全和异常处理。"
+    "task" : "今天上海天气怎么样？顺便推荐晚饭吃什么。"
   }, {
-    "id" : "QA-WORD-020",
-    "category" : "ambiguous_followup",
-    "expectedSkill" : "docx-report-generator",
-    "expectedActivation" : true,
-    "actualSkill" : "docx-report-generator",
+    "id" : "QA-GEN-020",
+    "category" : "negative_routing",
+    "expectedSkill" : "",
+    "expectedActivation" : false,
+    "actualSkill" : "",
     "passed" : true,
-    "latencyNanos" : 4911211600,
-    "tokens" : 105,
-    "reason" : "用户需要将汇报整理成专业的Word文档，包含摘要、关键指标、风险和决策事项，该技能专门用于自动生成Word报告。",
+    "latencyNanos" : 2204809200,
+    "tokens" : 70,
+    "reason" : "用户请求的是Java知识解释，不涉及任何技能目录中的具体开发、部署、文档生成或安全分析任务。",
     "error" : "",
-    "task" : "把这份汇报整理得专业一点。\n我希望最终是 Word 文件，文件名 board-update.docx，包含摘要、关键指标、风险和决策事项。"
+    "task" : "解释一下 Java 里 HashMap 和 ConcurrentHashMap 的区别，不需要查文档，也不用改代码。"
   } ]
 }

@@ -36,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @EnabledIfEnvironmentVariable(named = "RUN_REAL_LLM_TESTS", matches = "true")
 @DisplayName("Real skills directory + real DeepSeek LLM quantitative coverage")
 class SkillDimensionRealLlmCoverageTest {
-
+    // 报告输出目录是 test-results。
     private static final Path REPORT_DIR = Path.of("test-results");
 
     @Autowired
@@ -58,10 +58,10 @@ class SkillDimensionRealLlmCoverageTest {
     @DisplayName("runs TEST_DIMENSIONS.md as 51 quantified cases")
     void runsTestDimensionsAsQuantifiedCases() throws Exception {
         RealLlmReportCollector collector = new RealLlmReportCollector(objectMapper);
-        List<EvalCase> cases = buildCases();
+        List<EvalCase> cases = buildCases();// 生成全部用例
 
         assertEquals(51, cases.size(), "TEST_DIMENSIONS.md currently defines 51 quantified cases");
-        cases.forEach(item -> runCase(item, collector));
+        cases.forEach(item -> runCase(item, collector));// 逐个执行
         collector.writeReports(REPORT_DIR);
 
         assertEquals(0, collector.failedCount(), "See test-results/test-report.md for failed case details.");
@@ -70,7 +70,7 @@ class SkillDimensionRealLlmCoverageTest {
     @Test
     @DisplayName("runs datasets/skill_qa.jsonl as a quantified QA routing dataset")
     void runsSkillQaDatasetAsQuantifiedRoutingCases() throws Exception {
-        Path dataset = Path.of("datasets", "skill_qa.jsonl");
+        Path dataset = Path.of(System.getProperty("skill.qa.dataset", "datasets/skill_qa_generated_20.jsonl"));
         SkillQaReportCollector collector = new SkillQaReportCollector(objectMapper);
 
         List<String> lines = Files.readAllLines(dataset, StandardCharsets.UTF_8).stream()
@@ -90,7 +90,7 @@ class SkillDimensionRealLlmCoverageTest {
         String category = node.path("category").asText();
         String expectedSkill = node.path("expected_skill").isNull() ? "" : node.path("expected_skill").asText("");
         boolean expectedActivation = node.path("expected_activation").asBoolean(false);
-        String task = readTurns(node.path("turns"));
+        String task = readTurns(node.path("turns"));//把多轮对话拼成一段用户任务文本。
 
         long start = System.nanoTime();
         String actualSkill = "";
@@ -99,18 +99,18 @@ class SkillDimensionRealLlmCoverageTest {
         boolean passed;
 
         try {
-            SkillRouteResult result = activationService.activate(task);
+            SkillRouteResult result = activationService.activate(task);   // 做真实路由
             actualSkill = result.skillName();
             reason = result.reason();
-            passed = skillQaPassed(expectedSkill, expectedActivation, actualSkill);
+            passed = skillQaPassed(expectedSkill, expectedActivation, actualSkill);  // 判断是否通过。
         } catch (Exception ex) {
             passed = false;
             error = ex.getClass().getSimpleName() + ": " + nullToEmpty(ex.getMessage());
         }
 
         long latencyNanos = System.nanoTime() - start;
-        long tokens = estimateTokens(task + " " + actualSkill + " " + reason + " " + error);
-        collector.record(new SkillQaCaseResult(
+        long tokens = estimateTokens(task + " " + actualSkill + " " + reason + " " + error);// 粗略估 token
+        collector.record(new SkillQaCaseResult(   //记录到 SkillQaReportCollector
                 id,
                 category,
                 expectedSkill,
@@ -149,7 +149,7 @@ class SkillDimensionRealLlmCoverageTest {
         boolean passed;
 
         try {
-            CaseOutcome outcome = item.runner().run();
+            CaseOutcome outcome = item.runner().run();  // 执行用例。
             actual = outcome.actual();
             actualSkill = outcome.actualSkill();
             passed = outcome.passed();
@@ -338,22 +338,45 @@ class SkillDimensionRealLlmCoverageTest {
 
     private List<EvalCase> adapterAndToolCases() {
         return List.of(
-                localCase("E-01", "create docx artifact", "SkillTools.createDocxDocument", () ->
-                        skillTools.createDocxDocument("real-eval/e-01.docx", "Eval", "Body").contains("Created DOCX")),
-                localCase("E-02", "write text artifact", "SkillTools.writeTextFile", () ->
-                        skillTools.writeTextFile("real-eval/e-02.txt", "ok").contains("Wrote text file")),
-                localCase("E-03", "list skill root files", "SkillTools.listSkillFiles", () ->
-                        skillTools.listSkillFiles("documents", ".").contains("SKILL.md")),
-                localCase("E-04", "read skill file", "SkillTools.readSkillFile", () ->
-                        !skillTools.readSkillFile("documents", "SKILL.md").isBlank()),
+                localCase("E-01", "run docx script help", "SkillTools.runSkillScript", () ->
+                        skillTools.runSkillScript("docx-report-generator", "scripts/docx_ops.py", "--help")
+                                .contains("DOCX Report Generator")),
+                localCase("E-02", "run docx create-report script", "SkillTools.runSkillScript", () -> {
+                    Path output = Path.of("target", "skill-runtime-output", "real-eval", "e-02-script.docx");
+                    Files.createDirectories(output.getParent());
+                    String response = skillTools.runSkillScript(
+                            "docx-report-generator",
+                            "scripts/docx_ops.py",
+                            "create-report --title Eval -o ../../target/skill-runtime-output/real-eval/e-02-script.docx"
+                    );
+                    return response.contains("exitCode=0") && response.contains("报告已创建") && Files.isRegularFile(output);
+                }),
+                localCase("E-03", "run docx add-toc script", "SkillTools.runSkillScript", () -> {
+                    Path input = Path.of("target", "skill-runtime-output", "real-eval", "e-03-source.docx");
+                    Path output = Path.of("target", "skill-runtime-output", "real-eval", "e-03-with-toc.docx");
+                    Files.createDirectories(input.getParent());
+                    skillTools.runSkillScript(
+                            "docx-report-generator",
+                            "scripts/docx_ops.py",
+                            "create-report --title TocSource -o ../../target/skill-runtime-output/real-eval/e-03-source.docx"
+                    );
+                    String response = skillTools.runSkillScript(
+                            "docx-report-generator",
+                            "scripts/docx_ops.py",
+                            "add-toc ../../target/skill-runtime-output/real-eval/e-03-source.docx -o ../../target/skill-runtime-output/real-eval/e-03-with-toc.docx"
+                    );
+                    return response.contains("exitCode=0") && response.contains("目录已添加") && Files.isRegularFile(output);
+                }),
+                localCase("E-04", "list skill scripts", "SkillTools.listSkillFiles", () ->
+                        skillTools.listSkillFiles("docx-report-generator", "scripts").contains("scripts/docx_ops.py")),
                 localCase("E-05", "missing script is captured", "SkillTools.runSkillScript", () ->
-                        skillTools.runSkillScript("documents", "scripts/missing.py", "").contains("Not a script file")),
+                        skillTools.runSkillScript("docx-report-generator", "scripts/missing.py", "").contains("Not a script file")),
                 localCase("E-06", "output path escape is rejected", "SkillTools.writeTextFile", () ->
                         throwsIllegalArgument(() -> skillTools.writeTextFile("../escape.txt", "blocked"))),
                 localCase("E-07", "skill path escape is rejected", "SkillTools.readSkillFile", () ->
-                        throwsIllegalArgument(() -> skillTools.readSkillFile("documents", "../SKILL.md"))),
+                        throwsIllegalArgument(() -> skillTools.readSkillFile("docx-report-generator", "../SKILL.md"))),
                 localCase("E-08", "run root script is blocked", "SkillTools.runSkillScript", () ->
-                        skillTools.runSkillScript("documents", "render_docx.py", "").contains("Not a script file"))
+                        skillTools.runSkillScript("docx-report-generator", "docx_ops.py", "").contains("Not a script file"))
         );
     }
 

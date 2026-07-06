@@ -1,328 +1,268 @@
 {
   "confusionMatrix" : {
-    "tp" : 10,
-    "tn" : 2,
+    "tp" : 0,
+    "tn" : 0,
     "fp" : 0,
-    "fn" : 1
+    "fn" : 13
   },
   "classificationMetrics" : {
-    "accuracy" : 0.9230769230769231,
-    "precision" : 1.0,
-    "recall" : 0.9090909090909091
+    "accuracy" : 0.0,
+    "precision" : 0.0,
+    "recall" : 0.0
   },
   "tokenUsage" : {
-    "min" : 0,
-    "max" : 479,
-    "avg" : 26.372549019607842,
-    "total" : 1345,
-    "p50" : 6.0,
-    "p95" : 35.0
+    "min" : 2,
+    "max" : 29,
+    "avg" : 11.980392156862745,
+    "total" : 611,
+    "p50" : 11.0,
+    "p95" : 24.0
   },
   "latencyMs" : {
     "min" : 0,
-    "max" : 286630,
-    "avg" : 7905.843137254902,
-    "total" : 403198,
+    "max" : 462,
+    "avg" : 9.235294117647058,
+    "total" : 471,
     "p50" : 0.0,
-    "p95" : 12119.0
+    "p95" : 2.0
   },
   "bySkill" : {
-    "docx-report-generator" : {
-      "executions" : 4,
-      "avgTokens" : 129.5,
-      "avgLatencyMs" : 19213.83760025,
-      "successRate" : 1.0
-    },
-    "documents" : {
-      "executions" : 3,
-      "avgTokens" : 135.0,
-      "avgLatencyMs" : 96774.72056666667,
-      "successRate" : 1.0
-    },
-    "pdf" : {
-      "executions" : 2,
-      "avgTokens" : 6.5,
-      "avgLatencyMs" : 963.6549004999999,
-      "successRate" : 1.0
-    },
-    "openai-docs" : {
-      "executions" : 2,
-      "avgTokens" : 9.0,
-      "avgLatencyMs" : 922.6716,
-      "successRate" : 1.0
-    },
-    "render-deploy" : {
-      "executions" : 2,
-      "avgTokens" : 9.5,
-      "avgLatencyMs" : 1035.3802,
-      "successRate" : 1.0
-    },
-    "cloudflare-deploy" : {
-      "executions" : 2,
-      "avgTokens" : 8.0,
-      "avgLatencyMs" : 828.16885,
-      "successRate" : 1.0
-    },
-    "security-best-practices" : {
-      "executions" : 2,
-      "avgTokens" : 9.5,
-      "avgLatencyMs" : 1361.046249,
-      "successRate" : 1.0
-    },
-    "chatgpt-apps" : {
-      "executions" : 1,
-      "avgTokens" : 12.0,
-      "avgLatencyMs" : 1864.8067,
-      "successRate" : 1.0
-    },
-    "figma-generate-library" : {
-      "executions" : 1,
-      "avgTokens" : 15.0,
-      "avgLatencyMs" : 2107.5371,
-      "successRate" : 1.0
-    },
-    "notion-knowledge-capture" : {
-      "executions" : 1,
-      "avgTokens" : 12.0,
-      "avgLatencyMs" : 2845.7509,
-      "successRate" : 1.0
-    },
     "None" : {
-      "executions" : 31,
-      "avgTokens" : 9.612903225806452,
-      "avgLatencyMs" : 612.3201224838709,
-      "successRate" : 0.9354838709677419
+      "executions" : 51,
+      "avgTokens" : 11.980392156862745,
+      "avgLatencyMs" : 9.284272549019608,
+      "successRate" : 0.4117647058823529
     }
   },
   "byAdapter" : {
     "spring-ai-openai-compatible" : {
       "executions" : 13,
-      "avgTokens" : 11.23076923076923,
-      "avgLatencyMs" : 2356.882753923077,
-      "successRate" : 0.9230769230769231
+      "avgTokens" : 14.615384615384615,
+      "avgLatencyMs" : 0.027430769230769227,
+      "successRate" : 0.0
     },
     "java-regex-field-extractor" : {
       "executions" : 5,
       "avgTokens" : 14.8,
-      "avgLatencyMs" : 0.12922,
+      "avgLatencyMs" : 0.14794000000000002,
       "successRate" : 1.0
     },
     "decision-schema-validator" : {
       "executions" : 4,
       "avgTokens" : 19.0,
-      "avgLatencyMs" : 0.08847450000000001,
+      "avgLatencyMs" : 1.864825,
       "successRate" : 1.0
     },
     "spring-ai-openai-compatible-tools" : {
       "executions" : 3,
-      "avgTokens" : 301.0,
-      "avgLatencyMs" : 124181.4469,
-      "successRate" : 1.0
+      "avgTokens" : 16.0,
+      "avgLatencyMs" : 0.011933333333333332,
+      "successRate" : 0.0
     },
     "spring-ai-prompt-builder" : {
       "executions" : 1,
-      "avgTokens" : 6.0,
-      "avgLatencyMs" : 0.2852,
-      "successRate" : 1.0
+      "avgTokens" : 15.0,
+      "avgLatencyMs" : 0.0128,
+      "successRate" : 0.0
     },
     "latency-recorder" : {
       "executions" : 1,
       "avgTokens" : 4.0,
-      "avgLatencyMs" : 0.0051,
+      "avgLatencyMs" : 0.0029,
       "successRate" : 1.0
     },
     "token-estimator" : {
       "executions" : 1,
       "avgTokens" : 5.0,
-      "avgLatencyMs" : 0.011399,
+      "avgLatencyMs" : 0.0074,
       "successRate" : 1.0
     },
     "SkillTools.createDocxDocument" : {
       "executions" : 1,
       "avgTokens" : 4.0,
-      "avgLatencyMs" : 11.482199,
+      "avgLatencyMs" : 461.9996,
       "successRate" : 1.0
     },
     "SkillTools.writeTextFile" : {
       "executions" : 3,
       "avgTokens" : 5.333333333333333,
-      "avgLatencyMs" : 0.32826700000000003,
+      "avgLatencyMs" : 0.6388333333333333,
       "successRate" : 1.0
     },
     "SkillTools.listSkillFiles" : {
       "executions" : 1,
-      "avgTokens" : 5.0,
-      "avgLatencyMs" : 0.292099,
-      "successRate" : 1.0
+      "avgTokens" : 10.0,
+      "avgLatencyMs" : 0.0335,
+      "successRate" : 0.0
     },
     "SkillTools.readSkillFile" : {
       "executions" : 3,
-      "avgTokens" : 5.333333333333333,
-      "avgLatencyMs" : 0.271267,
-      "successRate" : 1.0
+      "avgTokens" : 7.0,
+      "avgLatencyMs" : 0.09073333333333333,
+      "successRate" : 0.6666666666666666
     },
     "SkillTools.runSkillScript" : {
       "executions" : 2,
-      "avgTokens" : 5.5,
-      "avgLatencyMs" : 0.2519495,
-      "successRate" : 0.5
+      "avgTokens" : 10.5,
+      "avgLatencyMs" : 0.0091,
+      "successRate" : 0.0
     },
     "DefaultSkillDiscoveryService" : {
       "executions" : 10,
-      "avgTokens" : 5.9,
-      "avgLatencyMs" : 0.07566999999999999,
-      "successRate" : 1.0
+      "avgTokens" : 10.7,
+      "avgLatencyMs" : 0.014000000000000002,
+      "successRate" : 0.1
     },
     "SkillLoader" : {
       "executions" : 3,
       "avgTokens" : 6.666666666666667,
-      "avgLatencyMs" : 0.4741666666666666,
+      "avgLatencyMs" : 0.16779999999999998,
       "successRate" : 1.0
     }
   },
   "executionDetails" : [ {
     "caseId" : "A-01",
     "dimension" : "A-routing-accuracy",
-    "skill" : "docx-report-generator",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 14,
-    "latencyMs" : 3059.904601,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.1928,
     "expected" : "[docx-report-generator]",
-    "actual" : "docx-report-generator",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-02",
     "dimension" : "A-routing-accuracy",
-    "skill" : "documents",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 14,
-    "latencyMs" : 3693.5796,
+    "passed" : false,
+    "tokens" : 19,
+    "latencyMs" : 0.0701,
     "expected" : "[documents, docx-report-generator]",
-    "actual" : "documents",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-03",
     "dimension" : "A-routing-accuracy",
-    "skill" : "pdf",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 11,
-    "latencyMs" : 1927.247901,
+    "passed" : false,
+    "tokens" : 16,
+    "latencyMs" : 0.0129,
     "expected" : "[pdf]",
-    "actual" : "pdf",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-04",
     "dimension" : "A-routing-accuracy",
-    "skill" : "openai-docs",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 14,
-    "latencyMs" : 1845.2874,
+    "passed" : false,
+    "tokens" : 17,
+    "latencyMs" : 0.0084,
     "expected" : "[openai-docs]",
-    "actual" : "openai-docs",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-05",
     "dimension" : "A-routing-accuracy",
-    "skill" : "render-deploy",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 15,
-    "latencyMs" : 2070.694199,
+    "passed" : false,
+    "tokens" : 18,
+    "latencyMs" : 0.0079,
     "expected" : "[render-deploy]",
-    "actual" : "render-deploy",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-06",
     "dimension" : "A-routing-accuracy",
-    "skill" : "cloudflare-deploy",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 12,
-    "latencyMs" : 1656.2771,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0092,
     "expected" : "[cloudflare-deploy]",
-    "actual" : "cloudflare-deploy",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-07",
     "dimension" : "A-routing-accuracy",
-    "skill" : "security-best-practices",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 13,
-    "latencyMs" : 2722.031399,
+    "passed" : false,
+    "tokens" : 14,
+    "latencyMs" : 0.0076,
     "expected" : "[security-best-practices]",
-    "actual" : "security-best-practices",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-08",
     "dimension" : "A-routing-accuracy",
-    "skill" : "chatgpt-apps",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 12,
-    "latencyMs" : 1864.8067,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0078,
     "expected" : "[chatgpt-apps]",
-    "actual" : "chatgpt-apps",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-09",
     "dimension" : "A-routing-accuracy",
-    "skill" : "figma-generate-library",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 15,
-    "latencyMs" : 2107.5371,
+    "passed" : false,
+    "tokens" : 16,
+    "latencyMs" : 0.0074,
     "expected" : "[figma-generate-library, figma-use]",
-    "actual" : "figma-generate-library",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-10",
     "dimension" : "A-routing-accuracy",
-    "skill" : "notion-knowledge-capture",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 12,
-    "latencyMs" : 2845.7509,
+    "passed" : false,
+    "tokens" : 13,
+    "latencyMs" : 0.0096,
     "expected" : "[notion-knowledge-capture, notion-research-documentation]",
-    "actual" : "notion-knowledge-capture",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-11",
     "dimension" : "A-routing-accuracy",
     "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
     "passed" : false,
-    "tokens" : 6,
-    "latencyMs" : 2075.777301,
+    "tokens" : 12,
+    "latencyMs" : 0.0075,
     "expected" : "[speech]",
     "actual" : "",
-    "error" : ""
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-12",
     "dimension" : "A-routing-accuracy",
     "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 8,
-    "latencyMs" : 3198.3477,
+    "passed" : false,
+    "tokens" : 14,
+    "latencyMs" : 0.008,
     "expected" : "[]",
     "actual" : "",
-    "error" : ""
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "A-13",
     "dimension" : "A-routing-accuracy",
     "skill" : "None",
     "adapter" : "spring-ai-openai-compatible",
-    "passed" : true,
-    "tokens" : 0,
-    "latencyMs" : 1572.2339,
+    "passed" : false,
+    "tokens" : 6,
+    "latencyMs" : 0.0074,
     "expected" : "[]",
     "actual" : "",
-    "error" : ""
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "B-01",
     "dimension" : "B-field-extraction",
@@ -330,7 +270,7 @@
     "adapter" : "java-regex-field-extractor",
     "passed" : true,
     "tokens" : 16,
-    "latencyMs" : 0.397799,
+    "latencyMs" : 0.4974,
     "expected" : "{filename=weekly-report.docx}",
     "actual" : "{filename=weekly-report.docx}",
     "error" : ""
@@ -341,7 +281,7 @@
     "adapter" : "java-regex-field-extractor",
     "passed" : true,
     "tokens" : 18,
-    "latencyMs" : 0.0903,
+    "latencyMs" : 0.0737,
     "expected" : "{template_name=product-review}",
     "actual" : "{template_name=product-review}",
     "error" : ""
@@ -352,8 +292,8 @@
     "adapter" : "java-regex-field-extractor",
     "passed" : true,
     "tokens" : 29,
-    "latencyMs" : 0.1166,
-    "expected" : "{template_name=q2-summary, filename=q2-summary.docx}",
+    "latencyMs" : 0.0756,
+    "expected" : "{filename=q2-summary.docx, template_name=q2-summary}",
     "actual" : "{filename=q2-summary.docx, template_name=q2-summary}",
     "error" : ""
   }, {
@@ -363,7 +303,7 @@
     "adapter" : "java-regex-field-extractor",
     "passed" : true,
     "tokens" : 2,
-    "latencyMs" : 0.0028,
+    "latencyMs" : 0.0033,
     "expected" : "{}",
     "actual" : "{}",
     "error" : ""
@@ -374,7 +314,7 @@
     "adapter" : "java-regex-field-extractor",
     "passed" : true,
     "tokens" : 9,
-    "latencyMs" : 0.038601,
+    "latencyMs" : 0.0897,
     "expected" : "{}",
     "actual" : "{}",
     "error" : ""
@@ -385,7 +325,7 @@
     "adapter" : "decision-schema-validator",
     "passed" : true,
     "tokens" : 27,
-    "latencyMs" : 0.105799,
+    "latencyMs" : 0.1098,
     "expected" : "schema rejected",
     "actual" : "Unknown skill: missing-skill",
     "error" : ""
@@ -396,7 +336,7 @@
     "adapter" : "decision-schema-validator",
     "passed" : true,
     "tokens" : 24,
-    "latencyMs" : 0.0067,
+    "latencyMs" : 0.0081,
     "expected" : "schema rejected",
     "actual" : "should_call must be boolean",
     "error" : ""
@@ -407,7 +347,7 @@
     "adapter" : "decision-schema-validator",
     "passed" : true,
     "tokens" : 20,
-    "latencyMs" : 0.0056,
+    "latencyMs" : 0.0057,
     "expected" : "schema rejected",
     "actual" : "confidence must be number",
     "error" : ""
@@ -418,54 +358,54 @@
     "adapter" : "decision-schema-validator",
     "passed" : true,
     "tokens" : 5,
-    "latencyMs" : 0.235799,
+    "latencyMs" : 7.3357,
     "expected" : "JsonProcessingException",
     "actual" : "JsonParseException",
     "error" : ""
   }, {
     "caseId" : "D-01",
     "dimension" : "D-execution-chain",
-    "skill" : "docx-report-generator",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible-tools",
-    "passed" : true,
-    "tokens" : 479,
-    "latencyMs" : 73795.3588,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0246,
     "expected" : "non-empty execution response",
-    "actual" : "实习报告已成功生成！\uD83D\uDCC4\n\n**文件路径：** `internship_report.docx`\n\n报告包含以下完整内容：\n\n| 章节 | 内容概要 |\n|------|----------|\n| \uD83D\uDCCB **基本信息** | 姓名、学号、专业、实习单位、岗位、时间、导师 |\n| \uD83C\uDFAF **实习目的与背景** | 理论应用于实践，提升工程能力和职业素养 |\n| \uD83C\uDFE2 **实习单位简介** | 星辰科技有限公司概况 |\n| \uD83D\uDEE0️ **实习主要内容** | 6个工作模块：用户服务、订单优化、商品搜索、消息推送、单元测试、API文档 |\n| \uD83D\uDCA1 **关键技术实践** | 微服务架构设计、数据库性能优化（800ms→120ms）、全文检索集成 |\n| \uD83D\uDCCA **实习成果数据** | 接口24个、代码12,000行、测试156个(覆盖率92%)、Bug修复47个 |\n| ✨ **实习心得** | 技术能力、工程思维、团队协作、问题解决、职业素养五大提升 |\n| \uD83D\uDD2D **总结与展望** | 未来学习计划与职业目标 |\n| \uD83D\uDE4F **致谢** | 感谢公司、导师和团队 |\n\n文档已使用 Word 格式创建，包含标题、正文段落、列表等基础排版。如需进一步美化（添加目录、表格、图表或自定义样式），我还可以继续使用脚本工具进行增强处理。是否需要我进一步优化？",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "D-02",
     "dimension" : "D-execution-chain",
-    "skill" : "documents",
+    "skill" : "None",
     "adapter" : "spring-ai-openai-compatible-tools",
-    "passed" : true,
-    "tokens" : 389,
-    "latencyMs" : 286630.3408,
+    "passed" : false,
+    "tokens" : 17,
+    "latencyMs" : 0.006,
     "expected" : "non-empty execution response",
-    "actual" : "The document has been created successfully. Here's a summary of what was delivered:\n\n---\n\n## ✅ Spring AI Skill Routing — DOCX Delivered\n\n**File:** `Spring_AI_Skill_Routing.docx`\n\n**Design Preset:** `standard_business_brief` — Calibri-based, professional typography with blue heading hierarchy (#2E74B5), clean body spacing, and consistent table styling.\n\n**Document Structure:**\n\n| Section | Content |\n|---|---|\n| **Title** | Spring AI Skill Routing (22pt bold blue, with italic subtitle) |\n| **Overview** | What skill routing is and why it matters in Spring AI |\n| **Core Concepts** | Skill, Router, and Routing Policy explained |\n| **Routing Strategies** | Table comparing 5 strategies (content-based, tag-based, model-capability, fallback chain, hybrid) |\n| **Configuration Approach** | How to set up skills, routers, and dispatch in Spring AI |\n| **Benefits** | Modularity, extensibility, observability, resilience, performance |\n| **Design Considerations** | Latency, ambiguity, contract evolution, observability investment |\n| **Summary** | Key takeaways |\n\n**Quality Checks:**\n- ✅ Page setup: US Letter, 1in margins\n- ✅ Table geometry: verified — `tblW`, `tblInd`, `tblGrid`, and `tcW` all match (9360 DXA full-width)\n- ✅ Content: 7 major sections, 1 comparison table, bullet lists\n- ⚠️ Visual render QA was not completed (LibreOffice/`soffice` unavailable in this environment)\n\nThe document provides a concise yet thorough technical brief on Spring AI skill routing — covering the what, why, and how of intelligent request dispatch within the Spring AI framework.",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "D-03",
     "dimension" : "D-execution-chain",
     "skill" : "None",
     "adapter" : "spring-ai-openai-compatible-tools",
-    "passed" : true,
-    "tokens" : 35,
-    "latencyMs" : 12118.6411,
+    "passed" : false,
+    "tokens" : 16,
+    "latencyMs" : 0.0052,
     "expected" : "non-empty execution response",
-    "actual" : "No suitable skill found. Reason: No skill in catalog matches the task of writing a generic text draft about runtime evaluation metrics.",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalStateException: No skills loaded."
   }, {
     "caseId" : "D-04",
     "dimension" : "D-execution-chain",
     "skill" : "None",
     "adapter" : "spring-ai-prompt-builder",
-    "passed" : true,
-    "tokens" : 6,
-    "latencyMs" : 0.2852,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0128,
     "expected" : "true",
-    "actual" : "true",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: docx-report-generator"
   }, {
     "caseId" : "D-05",
     "dimension" : "D-execution-chain",
@@ -473,7 +413,7 @@
     "adapter" : "latency-recorder",
     "passed" : true,
     "tokens" : 4,
-    "latencyMs" : 0.0051,
+    "latencyMs" : 0.0029,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -484,7 +424,7 @@
     "adapter" : "token-estimator",
     "passed" : true,
     "tokens" : 5,
-    "latencyMs" : 0.011399,
+    "latencyMs" : 0.0074,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -495,7 +435,7 @@
     "adapter" : "SkillTools.createDocxDocument",
     "passed" : true,
     "tokens" : 4,
-    "latencyMs" : 11.482199,
+    "latencyMs" : 461.9996,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -506,7 +446,7 @@
     "adapter" : "SkillTools.writeTextFile",
     "passed" : true,
     "tokens" : 4,
-    "latencyMs" : 0.6631,
+    "latencyMs" : 1.5367,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -515,34 +455,34 @@
     "dimension" : "E-adapter-tool-coverage",
     "skill" : "None",
     "adapter" : "SkillTools.listSkillFiles",
-    "passed" : true,
-    "tokens" : 5,
-    "latencyMs" : 0.292099,
+    "passed" : false,
+    "tokens" : 10,
+    "latencyMs" : 0.0335,
     "expected" : "true",
-    "actual" : "true",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: documents"
   }, {
     "caseId" : "E-04",
     "dimension" : "E-adapter-tool-coverage",
     "skill" : "None",
     "adapter" : "SkillTools.readSkillFile",
-    "passed" : true,
-    "tokens" : 4,
-    "latencyMs" : 0.603601,
+    "passed" : false,
+    "tokens" : 9,
+    "latencyMs" : 0.009,
     "expected" : "true",
-    "actual" : "true",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: documents"
   }, {
     "caseId" : "E-05",
     "dimension" : "E-adapter-tool-coverage",
     "skill" : "None",
     "adapter" : "SkillTools.runSkillScript",
-    "passed" : true,
-    "tokens" : 5,
-    "latencyMs" : 0.3636,
+    "passed" : false,
+    "tokens" : 10,
+    "latencyMs" : 0.0077,
     "expected" : "true",
-    "actual" : "true",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: documents"
   }, {
     "caseId" : "E-06",
     "dimension" : "E-adapter-tool-coverage",
@@ -550,7 +490,7 @@
     "adapter" : "SkillTools.writeTextFile",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 0.223001,
+    "latencyMs" : 0.2951,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -561,7 +501,7 @@
     "adapter" : "SkillTools.readSkillFile",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 0.0988,
+    "latencyMs" : 0.1447,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -571,21 +511,21 @@
     "skill" : "None",
     "adapter" : "SkillTools.runSkillScript",
     "passed" : false,
-    "tokens" : 6,
-    "latencyMs" : 0.140299,
+    "tokens" : 11,
+    "latencyMs" : 0.0105,
     "expected" : "true",
-    "actual" : "false",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: documents"
   }, {
     "caseId" : "F-01",
     "dimension" : "F-boundary-robustness",
     "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
+    "passed" : false,
     "tokens" : 7,
-    "latencyMs" : 0.0179,
+    "latencyMs" : 0.0117,
     "expected" : "true",
-    "actual" : "true",
+    "actual" : "false",
     "error" : ""
   }, {
     "caseId" : "F-02",
@@ -594,7 +534,7 @@
     "adapter" : "DefaultSkillDiscoveryService",
     "passed" : true,
     "tokens" : 5,
-    "latencyMs" : 0.1049,
+    "latencyMs" : 0.0824,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -605,7 +545,7 @@
     "adapter" : "SkillLoader",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 0.1405,
+    "latencyMs" : 0.2357,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -616,7 +556,7 @@
     "adapter" : "SkillLoader",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 1.1439,
+    "latencyMs" : 0.1611,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -627,7 +567,7 @@
     "adapter" : "SkillLoader",
     "passed" : true,
     "tokens" : 8,
-    "latencyMs" : 0.1381,
+    "latencyMs" : 0.1066,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -638,7 +578,7 @@
     "adapter" : "SkillTools.writeTextFile",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 0.0987,
+    "latencyMs" : 0.0847,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
@@ -649,97 +589,97 @@
     "adapter" : "SkillTools.readSkillFile",
     "passed" : true,
     "tokens" : 6,
-    "latencyMs" : 0.1114,
+    "latencyMs" : 0.1185,
     "expected" : "true",
     "actual" : "true",
     "error" : ""
   }, {
     "caseId" : "G-01",
     "dimension" : "G-discovery-completeness",
-    "skill" : "documents",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 2,
-    "latencyMs" : 0.2413,
+    "passed" : false,
+    "tokens" : 7,
+    "latencyMs" : 0.01,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: documents"
   }, {
     "caseId" : "G-02",
     "dimension" : "G-discovery-completeness",
-    "skill" : "docx-report-generator",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 6,
-    "latencyMs" : 0.0774,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0054,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: docx-report-generator"
   }, {
     "caseId" : "G-03",
     "dimension" : "G-discovery-completeness",
-    "skill" : "pdf",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 2,
-    "latencyMs" : 0.0619,
+    "passed" : false,
+    "tokens" : 7,
+    "latencyMs" : 0.0053,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: pdf"
   }, {
     "caseId" : "G-04",
     "dimension" : "G-discovery-completeness",
-    "skill" : "openai-docs",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 4,
-    "latencyMs" : 0.0558,
+    "passed" : false,
+    "tokens" : 11,
+    "latencyMs" : 0.0048,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: openai-docs"
   }, {
     "caseId" : "G-05",
     "dimension" : "G-discovery-completeness",
-    "skill" : "render-deploy",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 4,
-    "latencyMs" : 0.066201,
+    "passed" : false,
+    "tokens" : 11,
+    "latencyMs" : 0.0048,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: render-deploy"
   }, {
     "caseId" : "G-06",
     "dimension" : "G-discovery-completeness",
-    "skill" : "cloudflare-deploy",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 4,
-    "latencyMs" : 0.0606,
+    "passed" : false,
+    "tokens" : 11,
+    "latencyMs" : 0.0048,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: cloudflare-deploy"
   }, {
     "caseId" : "G-07",
     "dimension" : "G-discovery-completeness",
-    "skill" : "security-best-practices",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 6,
-    "latencyMs" : 0.061099,
+    "passed" : false,
+    "tokens" : 15,
+    "latencyMs" : 0.0048,
     "expected" : "loaded",
-    "actual" : "loaded",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: security-best-practices"
   }, {
     "caseId" : "G-08",
     "dimension" : "G-discovery-completeness",
-    "skill" : "docx-report-generator",
+    "skill" : "None",
     "adapter" : "DefaultSkillDiscoveryService",
-    "passed" : true,
-    "tokens" : 19,
-    "latencyMs" : 0.0096,
+    "passed" : false,
+    "tokens" : 18,
+    "latencyMs" : 0.006,
     "expected" : "word-report-generator-1.0.0",
-    "actual" : "word-report-generator-1.0.0",
-    "error" : ""
+    "actual" : "",
+    "error" : "IllegalArgumentException: Unknown skill: docx-report-generator"
   } ]
 }
