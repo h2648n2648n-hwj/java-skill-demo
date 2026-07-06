@@ -5,6 +5,7 @@ Java Skill Demo
 
 **最新的测试结果位于"test-results\skill-qa-report-name to LLM.md"**
 
+**每部分的功能测试""test-results\test-report.md""**
 
 
 
