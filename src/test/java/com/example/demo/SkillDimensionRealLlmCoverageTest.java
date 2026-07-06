@@ -185,6 +185,7 @@ class SkillDimensionRealLlmCoverageTest {
         cases.addAll(adapterAndToolCases());
         cases.addAll(boundaryCases());
         cases.addAll(discoveryCases());
+//        return cases;
         return cases;
     }
 
